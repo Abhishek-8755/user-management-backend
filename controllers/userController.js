@@ -3,7 +3,6 @@ const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 const { calculateDistance } = require('../utils/geoUtils');
 
-// ------------------- Create User -------------------
 exports.createUser = async (req, res) => {
     try {
         const { name, email, password, address, latitude, longitude } = req.body;
@@ -48,7 +47,6 @@ exports.createUser = async (req, res) => {
     }
 };
 
-// ------------------- Toggle All Users Status -------------------
 exports.toggleUserStatus = async (req, res) => {
     try {
         await User.updateMany(
@@ -62,7 +60,6 @@ exports.toggleUserStatus = async (req, res) => {
     }
 };
 
-// ------------------- Get Distance -------------------
 exports.getDistance = async (req, res) => {
     try {
         const user = await User.findById(req.user.id);
@@ -84,7 +81,6 @@ exports.getDistance = async (req, res) => {
     }
 };
 
-// ------------------- User Listing -------------------
 exports.userListing = async (req, res) => {
     try {
         if (!req.query.week_number) {
