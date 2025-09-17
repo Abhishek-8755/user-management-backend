@@ -1,0 +1,158 @@
+{
+	"info": {
+		"_postman_id": "69caf9bf-e7f4-4504-8d2b-905e48e8481e",
+		"name": "localhost:5000",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43177564"
+	},
+	"item": [
+		{
+			"name": "/api/users/get-distance",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4Y2IwYWNiYWM3NzIyODQ2NTdhY2YyZCIsImlhdCI6MTc1ODEzNzAzNSwiZXhwIjoxNzU4MjIzNDM1fQ.3hr-J4T9uVV52XVrZW11ehkIRarQ5VmHK4Vaa1FTReg",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/users/get-distance?destination_latitude=28.7041&destination_longitude=77.1025",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"users",
+						"get-distance"
+					],
+					"query": [
+						{
+							"key": "destination_latitude",
+							"value": "28.7041"
+						},
+						{
+							"key": "destination_longitude",
+							"value": "77.1025"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/users/user-listing",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4Y2IwYWNiYWM3NzIyODQ2NTdhY2YyZCIsImlhdCI6MTc1ODEzNzAzNSwiZXhwIjoxNzU4MjIzNDM1fQ.3hr-J4T9uVV52XVrZW11ehkIRarQ5VmHK4Vaa1FTReg",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/users/user-listing?week_number=1,4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"users",
+						"user-listing"
+					],
+					"query": [
+						{
+							"key": "week_number",
+							"value": "1,4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/users/create-user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"John Doe\",\r\n  \"email\": \"john@example.com\",\r\n  \"password\": \"123456\",\r\n  \"address\": \"123 Main St\",\r\n  \"latitude\": \"28.6139\",\r\n  \"longitude\": \"77.2090\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/users/create-user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"users",
+						"create-user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/users/toggle-status",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4Y2IxNmEyYWM3NzIyODQ2NTdhY2Y0NSIsImlhdCI6MTc1ODE0MDA2NiwiZXhwIjoxNzU4MjI2NDY2fQ.7LyZt7S5EX44d582Y_vsh5YhdofLK0qfaIhjtf-41Zs",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/users/toggle-status",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"users",
+						"toggle-status"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
